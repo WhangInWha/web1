@@ -43,5 +43,28 @@ function getMovies(searchText) {
 
 // Get Singel Movie
 function getMovie(movieId) {
-    alert(movieId);
+    $.ajax({
+        method: 'Get',
+        url: 'http://www.omdbapi.com/?apikey=65a08387&i=' + movieId
+    }).done(function (movie) {
+        let movieTop = `
+            <div style="text-align:center">
+                <h1>${movie.Title}</h1>
+                <img src="${movie.Poster}">
+            </di>
+        `;
+        $('#movieTop').html(movieTop);
+
+        let movieDetails = `
+            <li><strong>Genre:</strong> ${movie.Genre}</div>
+            <li><strong>Rated:</strong> ${movie.Rated}</div>
+            <li><strong>Released:</strong> ${movie.Released}</div>
+            <li><strong>Runtime:</strong> ${movie.Runtime}</div>
+            <li><strong>IMDB Rating:</strong> ${movie.imdbRating}</div>            
+            <li><strong>IMDB Votes:</strong> ${movie.imdbVotes}</div>            
+            <li><strong>Actors:</strong> ${movie.Actors}</div>
+            <li><strong>Director:</strong> ${movie.Director}</div>
+        `;
+        $('#movieDetails').html(movieDetails).listview('refresh');
+    });
 }
