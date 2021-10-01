@@ -6,6 +6,12 @@ $(document).ready(function(){
     });
 });
 
+// Before Movie Details Page
+$(document).on('pagebeforeshow', '#movie', function () {
+    let movieId = sessionStorage.getItem('movieId');
+    getMovie(movieId);
+})
+
 // Single Movie Selected
 function movieClicked(id) {
     sessionStorage.setItem('movieId', id);
@@ -33,4 +39,9 @@ function getMovies(searchText) {
         });
         $('#movies').html(output).listview('refresh');
     });
+}
+
+// Get Singel Movie
+function getMovie(movieId) {
+    alert(movieId);
 }
