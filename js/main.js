@@ -22,7 +22,7 @@ function getMovies(searchText) {
         $.each(movies, function(index, movie) {
             output += `
                 <li>
-                    <a onclick="movieClicked('${movie.imdbID}')" hef="#">
+                    <a onclick="movieClicked('${movie.imdbID}')" href="#">
                         <img src="${movie.Poster}">
                         <h2>${movie.Title}</h2>
                         <p>Release Year: ${movie.Year}</p>
