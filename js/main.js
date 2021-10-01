@@ -10,7 +10,7 @@ $(document).ready(function(){
 function getMovies(searchText) {
     $.ajax({
         method: 'Get',
-        url: 'http://www.omdbapi.com?s=' + searchText
+        url: 'http://www.omdbapi.com/?apikey=65a08387&s=' + searchText
     }).done(function (data) {
         console.log(data);
     });
