@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 // Single Movie Selected
 function movieClicked(id) {
-    console.log(id);
+    alert(id);
 }
 
 //Get Movies From OMDB API
