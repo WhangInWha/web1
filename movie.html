@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMDB</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="movie">
+        <div data-role="header" data-theme="b">
+            <h1>Movie Listings</h1>
+            <a href="index.html" class="ui-btn">Back</a>
+        </div>
+        <div data-role="main">
+            <div id="movieTop"></div>
+            <br /><br />
+            <ul id="movieDetails" data-role="listview"></ul>
+        </div>
+        <div data-role="footer" style="text-align:center" data-theme="b">
+            <p>OMDB &copy; 2021</p>
+        </div>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+</html>

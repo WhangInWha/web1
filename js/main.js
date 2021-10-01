@@ -8,7 +8,8 @@ $(document).ready(function(){
 
 // Single Movie Selected
 function movieClicked(id) {
-    alert(id);
+    sessionStorage.setItem('movieId', id);
+    $.mobile.changePage('movie.html');
 }
 
 //Get Movies From OMDB API
