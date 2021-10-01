@@ -4,46 +4,27 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>애플리케이션</title>
+    <title>MMDB</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
     <div data-role="page" id="foo">
         <div data-role="header">
-            <h1>My Title</h1>
-        </div><!-- /header -->
-        <div data-role="content">
-            <ul data-role="listview" data-inset="true" data-filter="true">
-                <li><a href="#Acura">Acura</a></li>
-                <li><a href="#">Audi444444</a></li>
-                <li><a href="#">BMW</a></li>
-                <li><a href="#">Cadillac</a></li>
-                <li><a href="#">Ferrari</a></li>
-            </ul>
-        </div><!-- /content -->
-        <div data-role="footer" class="ui-bar">
-            <a href="index.html" data-role="button" data-icon="plus">Add</a>
-            <a href="index.html" data-role="button" data-icon="arrow-u">Up</a>
-            <a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+            <h1>Movie Listings</h1>
         </div>
-    </div><!-- /page -->
-    <!-- Start of second page -->
-    <div data-role="page" id="Acura">
-
-        <div data-role="header">
-            <h1>Acura</h1>
-        </div><!-- /header -->
-
-        <div data-role="content">
-            <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my ID is beeing clicked.</p>
-            <p><a href="#foo">Back to foo</a></p>
-        </div><!-- /content -->
-
-        <div data-role="footer">
-            <h4>Page Footer</h4>
-        </div><!-- /footer -->
-    </div><!-- /page -->
+        <div data-role="main">
+            <form id="searchForm">
+                <div class="ui-field-contain">
+                    <input type="text" name="searchText" id="searchText" placeholder="Search For A Movie..." />
+                </div>
+            </form>
+            <ul id="movies" data-role="listview"></ul>
+        </div>
+        <div datga-role="footer" style="text-align:center">
+            <p>MMDB &copy; 2021</p>
+        </div>
+    </div>
 </body>
 </html>
