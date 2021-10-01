@@ -6,6 +6,11 @@ $(document).ready(function(){
     });
 });
 
+// Single Movie Selected
+function movieClicked(id) {
+    console.log(id);
+}
+
 //Get Movies From OMDB API
 function getMovies(searchText) {
     $.ajax({
@@ -17,7 +22,7 @@ function getMovies(searchText) {
         $.each(movies, function(index, movie) {
             output += `
                 <li>
-                    <a hef="#">
+                    <a onclick="movieClicked('${movie.imdbID}')" hef="#">
                         <img src="${movie.Poster}">
                         <h2>${movie.Title}</h2>
                         <p>Release Year: ${movie.Year}</p>
