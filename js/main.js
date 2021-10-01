@@ -12,6 +12,19 @@ function getMovies(searchText) {
         method: 'Get',
         url: 'http://www.omdbapi.com/?apikey=65a08387&s=' + searchText
     }).done(function (data) {
-        console.log(data);
+        let movies = data.Search;
+        let output = '';
+        $.each(movies, function (index, movie) {
+            output += `
+                <li>
+                    <a hef="#">
+                        <img src="${movie.Poster}">
+                        <h2>${movie.Title}</h2>
+                        <p>Release Year: ${movie.Year}</p>
+                    </a>
+                </li>
+                `;
+        });
+        $('#movies').html(output);
     });
 }
