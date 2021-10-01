@@ -14,7 +14,7 @@ function getMovies(searchText) {
     }).done(function (data) {
         let movies = data.Search;
         let output = '';
-        $.each(movies, function (index, movie) {
+        $.each(movies, function(index, movie) {
             output += `
                 <li>
                     <a hef="#">
